@@ -5,7 +5,12 @@
 
 [[redirects]]
   from = "/appstore/*"
-  to = "https://apps.apple.com/gb/app/ganddee/id6457107823" 
+  to = "https://apps.apple.com/gb/app/ganddee/id6457107823"
+  status = 200
+
+[[redirects]]
+  from = "/desktop/*"
+  to = "https://www.ganddee.com/broken-app-link"
   status = 200
 
 [[redirects]]
