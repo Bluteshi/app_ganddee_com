@@ -9,8 +9,15 @@ function getUrlParameter(name) {
 // Check for Firebase auth parameters
 var apiKey = getUrlParameter('apiKey');
 var oobCode = getUrlParameter('oobCode');
+var webLogin = getUrlParameter('webLogin');
 
-if (apiKey && oobCode) {
+
+if (webLogin === 'true') {
+    var encodedLink = encodeURIComponent(window.location.href);
+    window.location.href =
+        'https://biz.ganddee.com/email-signin-loading?link=' + encodedLink;
+
+} else if (apiKey && oobCode) {
     // Show message for manual sign-in
     var authMessage = document.getElementById('auth-message');
     var urlDisplay = document.getElementById('url-display');
